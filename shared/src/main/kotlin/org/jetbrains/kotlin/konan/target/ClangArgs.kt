@@ -81,10 +81,7 @@ class ClangArgs(private val configurables: Configurables) : Configurables by con
         KonanTarget.LINUX_ARM64 -> emptyList()
 
         KonanTarget.LINUX_ARM32_HFP -> listOf(
-                "-mfpu=vfp", "-mfloat-abi=hard",
-                // TODO: those two are hacks.
-                "-I$absoluteTargetSysRoot/usr/include/c++/4.8.3",
-                "-I$absoluteTargetSysRoot/usr/include/c++/4.8.3/arm-linux-gnueabihf"
+                "-mfpu=vfp", "-mfloat-abi=hard"
         )
 
         KonanTarget.MINGW_X64, KonanTarget.MINGW_X86 -> emptyList()
